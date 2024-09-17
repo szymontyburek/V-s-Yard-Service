@@ -5,26 +5,13 @@ const yardWork1 = document.getElementById("yardWork1");
 const yardWork2 = document.getElementById("yardWork2");
 const yardWork3 = document.getElementById("yardWork3");
 
-let yardWorkPairs = [
-  {
-    elem: yardWork1,
-    display: "flex",
-  },
-  {
-    elem: yardWork2,
-    display: "flex",
-  },
-  {
-    elem: yardWork3,
-    display: "flex",
-  },
-];
+let yardWorkPairs = [yardWork1, yardWork2, yardWork3];
 
 rightArrow.addEventListener("click", function () {
   let visibleIdx;
 
   for (let i = 0; i < yardWorkPairs.length; i++) {
-    const htmlElem = yardWorkPairs[i].elem;
+    const htmlElem = yardWorkPairs[i];
 
     if (htmlElem.style.display !== "none") {
       if (i === yardWorkPairs.length - 1) visibleIdx = 0;
@@ -36,15 +23,14 @@ rightArrow.addEventListener("click", function () {
     }
   }
 
-  const pair = yardWorkPairs[visibleIdx];
-  pair.elem.style.display = pair.display;
+  yardWorkPairs[visibleIdx].style.display = "flex";
 });
 
 leftArrow.addEventListener("click", function () {
   let visibleIdx;
 
   for (let i = 0; i < yardWorkPairs.length; i++) {
-    const htmlElem = yardWorkPairs[i].elem;
+    const htmlElem = yardWorkPairs[i];
 
     if (htmlElem.style.display !== "none") {
       if (i === 0) visibleIdx = yardWorkPairs.length - 1; //changed
@@ -56,8 +42,7 @@ leftArrow.addEventListener("click", function () {
     }
   }
 
-  const pair = yardWorkPairs[visibleIdx];
-  pair.elem.style.display = pair.display;
+  yardWorkPairs[visibleIdx].style.display = "flex";
 });
 
 const menuContentObj = {
