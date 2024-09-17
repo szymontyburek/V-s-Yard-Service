@@ -8,21 +8,15 @@ const yardWork3 = document.getElementById("yardWork3");
 let yardWorkPairs = [
   {
     elem: yardWork1,
-    display: function () {
-      return "block";
-    },
+    display: "block",
   },
   {
     elem: yardWork2,
-    display: function () {
-      return "flex";
-    },
+    display: "flex",
   },
   {
     elem: yardWork3,
-    display: function () {
-      return "flex";
-    },
+    display: "flex",
   },
 ];
 
@@ -43,7 +37,7 @@ rightArrow.addEventListener("click", function () {
   }
 
   const pair = yardWorkPairs[visibleIdx];
-  pair.elem.style.display = pair.display();
+  pair.elem.style.display = pair.display;
 });
 
 leftArrow.addEventListener("click", function () {
@@ -63,7 +57,7 @@ leftArrow.addEventListener("click", function () {
   }
 
   const pair = yardWorkPairs[visibleIdx];
-  pair.elem.style.display = pair.display();
+  pair.elem.style.display = pair.display;
 });
 
 const menuContentObj = {
