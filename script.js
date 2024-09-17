@@ -8,12 +8,24 @@ const yardWork3 = document.getElementById("yardWork3");
 let yardWorkPairs = [
   {
     elem: yardWork1,
-    display: window
-      .getComputedStyle(document.documentElement)
-      .getPropertyValue("--horizDisplay"),
+    display: function () {
+      return window
+        .getComputedStyle(document.documentElement)
+        .getPropertyValue("");
+    },
   },
-  { elem: yardWork2, display: "flex" },
-  { elem: yardWork3, display: "flex" },
+  {
+    elem: yardWork2,
+    display: function () {
+      return "flex";
+    },
+  },
+  {
+    elem: yardWork3,
+    display: function () {
+      return "flex";
+    },
+  },
 ];
 
 rightArrow.addEventListener("click", function () {
@@ -33,7 +45,7 @@ rightArrow.addEventListener("click", function () {
   }
 
   const pair = yardWorkPairs[visibleIdx];
-  pair.elem.style.display = pair.display;
+  pair.elem.style.display = pair.display();
 });
 
 leftArrow.addEventListener("click", function () {
@@ -53,7 +65,7 @@ leftArrow.addEventListener("click", function () {
   }
 
   const pair = yardWorkPairs[visibleIdx];
-  pair.elem.style.display = pair.display;
+  pair.elem.style.display = pair.display();
 });
 
 const menuContentObj = {
