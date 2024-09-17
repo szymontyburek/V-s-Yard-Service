@@ -75,7 +75,7 @@ for (const menuBtnId of menuBtnIds) {
       const contentDiv = menuContentObj[menuBtnId].div;
 
       if (contentDiv === menuContentObj[this.id].div) {
-        contentDiv.style.display = "block";
+        contentDiv.style.display = "flex";
         menuBtn.style.backgroundColor = "black";
         menuBtn.style.color = "white";
       } else {

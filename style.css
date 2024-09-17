@@ -35,3 +35,10 @@
   border: var(--imgBorder) solid black;
   border-radius: 10px;
 }
+
+@media (min-width: 601px) and (orientation: landscape) {
+  .contentVertical img {
+    width: auto;
+    height: calc(90vh - (var(--imgBorder) * 2) - 150px);
+  }
+}
