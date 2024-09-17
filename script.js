@@ -6,7 +6,12 @@ const yardWork2 = document.getElementById("yardWork2");
 const yardWork3 = document.getElementById("yardWork3");
 
 let yardWorkPairs = [
-  { elem: yardWork1, display: "block" },
+  {
+    elem: yardWork1,
+    display: window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--horizDisplay"),
+  },
   { elem: yardWork2, display: "flex" },
   { elem: yardWork3, display: "flex" },
 ];
