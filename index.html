@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>V's Yard Service</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div
@@ -34,6 +34,7 @@
     <div style="display: flex; justify-content: center; align-items: center">
       <svg
         id="leftArrow"
+        style="padding-right: 0.25em"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -53,7 +54,7 @@
           align-items: center;
         "
       >
-        <div class="contentHorizontal" id="yardWork1">
+        <div class="contentHorizontal" id="yardWork1" style="display: none">
           <div style="padding: 1em 0">
             <div class="title" style="margin-top: 0">Before</div>
             <img src="images/YardWork/yw1Before.jpg" alt="" />
@@ -63,12 +64,12 @@
             <img src="images/YardWork/yw1After.jpg" alt="" />
           </div>
         </div>
-        <div class="contentVertical" id="yardWork2" style="display: none">
-          <div style="padding: 1em 0">
+        <div class="contentVertical" id="yardWork2" style="display: flex">
+          <div style="padding: 1em 0.25em">
             <div class="title" style="margin-top: 0">Before</div>
             <img src="images/YardWork/yw2Before.jpg" alt="" />
           </div>
-          <div style="padding: 1em 0">
+          <div style="padding: 1em 0.25em">
             <div class="title">After</div>
             <img src="images/YardWork/yw2After.jpg" alt="" />
           </div>
@@ -76,6 +77,7 @@
       </div>
       <svg
         id="rightArrow"
+        style="padding-left: 0.25em"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"

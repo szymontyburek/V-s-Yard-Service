@@ -1,5 +1,5 @@
 :root {
-  --imgBorder: 5px;
+  --imgBorder: 3px;
 }
 
 .header {
@@ -34,7 +34,9 @@
 }
 
 .contentVertical img {
-  height: calc(50vh - (var(--imgBorder) * 2));
+  align-items: center;
+  justify-content: space-between;
+  width: calc(45vh - (var(--imgBorder) * 2) - 150px);
   border: var(--imgBorder) solid black;
   border-radius: 10px;
 }
