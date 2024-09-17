@@ -1,3 +1,7 @@
+:root {
+  --imgBorder: 5px;
+}
+
 .header {
   font-size: 1.5em;
 }
@@ -22,12 +26,13 @@
   width: 80%;
 }
 
-.contentHorizontal p {
+.contentHorizontal .title {
   font-size: 1.25em;
+  margin-bottom: 1em;
 }
 
 .contentHorizontal img {
-  width: 100%;
-  border: 5px solid black;
+  width: calc(100% - (var(--imgBorder) * 2));
+  border: var(--imgBorder) solid black;
   border-radius: 10px;
 }
