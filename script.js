@@ -8,7 +8,7 @@ const yardWork3 = document.getElementById("yardWork3");
 let yardWorkPairs = [
   {
     elem: yardWork1,
-    display: "block",
+    display: "flex",
   },
   {
     elem: yardWork2,
