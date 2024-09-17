@@ -32,3 +32,9 @@
   border: var(--imgBorder) solid black;
   border-radius: 10px;
 }
+
+.contentVertical img {
+  height: calc(50vh - (var(--imgBorder) * 2));
+  border: var(--imgBorder) solid black;
+  border-radius: 10px;
+}
