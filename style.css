@@ -6,10 +6,6 @@
   font-size: 1.5em;
 }
 
-.experienceMenu {
-  margin: 2em 0;
-}
-
 .experienceMenu div {
   background-color: lightgray;
   width: 33%;
@@ -23,12 +19,12 @@
 }
 
 .contentHorizontal {
-  width: 80%;
+  width: 100%;
 }
 
 .contentHorizontal .title {
   font-size: 1.25em;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 .contentHorizontal img {
