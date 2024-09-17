@@ -9,9 +9,7 @@ let yardWorkPairs = [
   {
     elem: yardWork1,
     display: function () {
-      return window
-        .getComputedStyle(document.documentElement)
-        .getPropertyValue("");
+      return "block";
     },
   },
   {

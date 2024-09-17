@@ -14,6 +14,12 @@
   padding: 1em;
 }
 
+.experienceMenu div:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
 .experienceContent {
   width: 90%;
 }
@@ -48,19 +54,24 @@
 
 @media (min-width: 601px) and (orientation: landscape) {
   :root {
-    --horizDisplay: "flex";
+    --horizDisplay: "block";
   }
 
   .contentVertical img {
     width: auto;
     height: calc(90vh - (var(--imgBorder) * 2) - 150px);
   }
+
   .contentHorizontal {
-    display: flex;
-    align-items: center;
+    width: auto;
   }
 
   .contentHorizontal div {
     margin: 0 0.5em;
+  }
+
+  .contentHorizontal img {
+    height: calc(50vh - (var(--imgBorder) * 2) - 150px);
+    width: auto;
   }
 }
