@@ -18,12 +18,16 @@
   color: white;
 }
 
+.contentHorizontal {
+  width: 80%;
+}
+
 .contentHorizontal p {
   font-size: 1.25em;
 }
 
 .contentHorizontal img {
-  width: 80%;
+  width: 100%;
   border: 5px solid black;
   border-radius: 10px;
 }
