@@ -50,3 +50,22 @@ leftArrow.addEventListener("click", function () {
   const pair = yardWorkPairs[visibleIdx];
   pair.elem.style.display = pair.display;
 });
+
+const yardWorkBtn = document.getElementById("yardWorkBtn");
+const yardWorkContent = document.getElementById("yardWorkContent");
+
+const haulingBtn = document.getElementById("haulingBtn");
+const haulingContent = document.getElementById("haulingContent");
+
+const handymanBtn = document.getElementById("handymanBtn");
+const handymanContent = document.getElementById("handymanContent");
+
+const menuContentArr = [
+  { yardWorkBtn: yardWorkContent },
+  { haulingBtn: haulingContent },
+  { handymanBtn: handymanContent },
+];
+
+yardWorkBtn.addEventListener("click", function () {
+  debugger;
+});
