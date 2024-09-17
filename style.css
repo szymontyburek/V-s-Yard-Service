@@ -18,7 +18,8 @@
   color: white;
 }
 
-.contentHorizontal {
+.contentHorizontal p {
+  font-size: 1.25em;
 }
 
 .contentHorizontal img {
