@@ -1,3 +1,19 @@
 .header {
   font-size: 1.5em;
 }
+
+.experienceMenu {
+  margin: 2em 0;
+}
+
+.experienceMenu div {
+  background-color: lightgray;
+  width: 33%;
+  text-align: center;
+  padding: 1em;
+}
+
+.experienceMenu div:hover {
+  background-color: black;
+  color: white;
+}
