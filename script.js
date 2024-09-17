@@ -51,19 +51,19 @@ leftArrow.addEventListener("click", function () {
   pair.elem.style.display = pair.display;
 });
 
-const yardWorkBtn = document.getElementById("yardWorkBtn");
-const yardWorkContent = document.getElementById("yardWorkContent");
-
-const haulingBtn = document.getElementById("haulingBtn");
-const haulingContent = document.getElementById("haulingContent");
-
-const handymanBtn = document.getElementById("handymanBtn");
-const handymanContent = document.getElementById("handymanContent");
-
 const menuContentObj = {
-  yardWorkBtn: { btn: yardWorkBtn, div: yardWorkContent },
-  haulingBtn: { btn: haulingBtn, div: haulingContent },
-  handymanBtn: { btn: handymanBtn, div: handymanContent },
+  yardWorkBtn: {
+    btn: document.getElementById("yardWorkBtn"),
+    div: document.getElementById("yardWorkContent"),
+  },
+  haulingBtn: {
+    btn: document.getElementById("haulingBtn"),
+    div: document.getElementById("haulingContent"),
+  },
+  handymanBtn: {
+    btn: document.getElementById("handymanBtn"),
+    div: document.getElementById("handymanContent"),
+  },
 };
 
 const menuBtnIds = Object.keys(menuContentObj);
@@ -87,4 +87,5 @@ for (const menuBtnId of menuBtnIds) {
   });
 }
 
+const yardWorkBtn = document.getElementById("yardWorkBtn");
 yardWorkBtn.click();
