@@ -60,12 +60,28 @@ const haulingContent = document.getElementById("haulingContent");
 const handymanBtn = document.getElementById("handymanBtn");
 const handymanContent = document.getElementById("handymanContent");
 
-const menuContentArr = [
-  { yardWorkBtn: yardWorkContent },
-  { haulingBtn: haulingContent },
-  { handymanBtn: handymanContent },
-];
+const menuContentObj = {
+  yardWorkBtn: { btn: yardWorkBtn, div: yardWorkContent },
+};
 
 yardWorkBtn.addEventListener("click", function () {
-  debugger;
+  const menuBtns = Object.keys(menuContentObj);
+
+  for (let i = 0; i < menuBtns.length; i++) {
+    const btnId = menuBtns[i];
+    const menuBtn = menuContentObj[btnId].btn;
+    const contentDiv = menuContentObj[btnId].div;
+
+    if (menuContentObj[this.id].div === contentDiv) {
+      contentDiv.style.display = "block";
+      menuBtn.style.backgroundColor = "black";
+      menuBtn.style.color = "white";
+    } else {
+      contentDiv.style.display = "none";
+      menuBtn.style.backgroundColor = "lightgray";
+      menuBtn.style.color = "black";
+    }
+  }
 });
+
+yardWorkBtn.click();
