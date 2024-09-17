@@ -14,6 +14,10 @@
   padding: 1em;
 }
 
+.experienceContent {
+  width: 90%;
+}
+
 .contentHorizontal {
   width: 100%;
 }
@@ -34,6 +38,12 @@
   width: calc(38vw - (var(--imgBorder) * 2));
   border: var(--imgBorder) solid black;
   border-radius: 10px;
+}
+
+@media (min-width: 601px) {
+  .experienceContent {
+    width: 80%;
+  }
 }
 
 @media (min-width: 601px) and (orientation: landscape) {
