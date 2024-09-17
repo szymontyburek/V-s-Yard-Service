@@ -62,26 +62,29 @@ const handymanContent = document.getElementById("handymanContent");
 
 const menuContentObj = {
   yardWorkBtn: { btn: yardWorkBtn, div: yardWorkContent },
+  haulingBtn: { btn: haulingBtn, div: haulingContent },
+  handymanBtn: { btn: handymanBtn, div: handymanContent },
 };
 
-yardWorkBtn.addEventListener("click", function () {
-  const menuBtns = Object.keys(menuContentObj);
+const menuBtnIds = Object.keys(menuContentObj);
 
-  for (let i = 0; i < menuBtns.length; i++) {
-    const btnId = menuBtns[i];
-    const menuBtn = menuContentObj[btnId].btn;
-    const contentDiv = menuContentObj[btnId].div;
+for (const menuBtnId of menuBtnIds) {
+  menuContentObj[menuBtnId].btn.addEventListener("click", function () {
+    for (const menuBtnId of menuBtnIds) {
+      const menuBtn = menuContentObj[menuBtnId].btn;
+      const contentDiv = menuContentObj[menuBtnId].div;
 
-    if (menuContentObj[this.id].div === contentDiv) {
-      contentDiv.style.display = "block";
-      menuBtn.style.backgroundColor = "black";
-      menuBtn.style.color = "white";
-    } else {
-      contentDiv.style.display = "none";
-      menuBtn.style.backgroundColor = "lightgray";
-      menuBtn.style.color = "black";
+      if (contentDiv === menuContentObj[this.id].div) {
+        contentDiv.style.display = "block";
+        menuBtn.style.backgroundColor = "black";
+        menuBtn.style.color = "white";
+      } else {
+        contentDiv.style.display = "none";
+        menuBtn.style.backgroundColor = "lightgray";
+        menuBtn.style.color = "black";
+      }
     }
-  }
-});
+  });
+}
 
 yardWorkBtn.click();

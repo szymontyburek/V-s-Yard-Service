@@ -13,11 +13,6 @@
   padding: 1em;
 }
 
-.experienceMenu div:hover {
-  background-color: black;
-  color: white;
-}
-
 .contentHorizontal {
   width: 100%;
 }
