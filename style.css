@@ -17,3 +17,12 @@
   background-color: black;
   color: white;
 }
+
+.contentHorizontal {
+}
+
+.contentHorizontal img {
+  width: 80%;
+  border: 5px solid black;
+  border-radius: 10px;
+}
