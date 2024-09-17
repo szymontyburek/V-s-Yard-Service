@@ -30,3 +30,23 @@ rightArrow.addEventListener("click", function () {
   const pair = yardWorkPairs[visibleIdx];
   pair.elem.style.display = pair.display;
 });
+
+leftArrow.addEventListener("click", function () {
+  let visibleIdx;
+
+  for (let i = 0; i < yardWorkPairs.length; i++) {
+    const htmlElem = yardWorkPairs[i].elem;
+
+    if (htmlElem.style.display !== "none") {
+      if (i === 0) visibleIdx = yardWorkPairs.length - 1; //changed
+      else visibleIdx = i - 1; //changed
+
+      htmlElem.style.display = "none";
+
+      break;
+    }
+  }
+
+  const pair = yardWorkPairs[visibleIdx];
+  pair.elem.style.display = pair.display;
+});
