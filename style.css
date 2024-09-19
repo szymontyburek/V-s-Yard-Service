@@ -7,8 +7,10 @@ body {
 }
 
 .homeSection {
-  background-image: url(images/homeSection/truckAndTrailer.jpg);
+  background-image: url(images/homeSection/truckVertical.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .header {
@@ -72,6 +74,10 @@ body {
 }
 
 @media (min-width: 601px) and (orientation: landscape) {
+  .homeSection {
+    background-image: url(images/homeSection/truckAndTrailer.jpg);
+  }
+
   .contentVertical img {
     width: auto;
     height: calc(90vh - (var(--imgBorder) * 2) - 150px);
