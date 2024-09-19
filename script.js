@@ -13,18 +13,23 @@ const handyman3 = document.getElementById("handyman3");
 
 let handymanPairs = [handyman1, handyman2, handyman3];
 
+const prevExperiences = Array.from(
+  document.querySelectorAll(".prevExperience")
+);
+
 const changePics = function () {
   let visibleIdx;
+  let prevExperiences = handymanPairs;
 
-  for (let i = 0; i < handymanPairs.length; i++) {
-    const htmlElem = handymanPairs[i];
+  for (let i = 0; i < prevExperiences.length; i++) {
+    const htmlElem = prevExperiences[i];
 
     if (htmlElem.style.display !== "none") {
       if (this.id === "rightArrow") {
-        if (i === handymanPairs.length - 1) visibleIdx = 0;
+        if (i === prevExperiences.length - 1) visibleIdx = 0;
         else visibleIdx = i + 1;
       } else {
-        if (i === 0) visibleIdx = handymanPairs.length - 1;
+        if (i === 0) visibleIdx = prevExperiences.length - 1;
         else visibleIdx = i - 1;
       }
 
@@ -34,7 +39,7 @@ const changePics = function () {
     }
   }
 
-  handymanPairs[visibleIdx].style.display = "flex";
+  prevExperiences[visibleIdx].style.display = "flex";
 };
 
 rightArrow.addEventListener("click", changePics.bind(rightArrow));
