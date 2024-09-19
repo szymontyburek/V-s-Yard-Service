@@ -7,15 +7,20 @@ const yardWork3 = document.getElementById("yardWork3");
 
 let yardWorkPairs = [yardWork1, yardWork2, yardWork3];
 
-rightArrow.addEventListener("click", function () {
+const changePics = function () {
   let visibleIdx;
 
   for (let i = 0; i < yardWorkPairs.length; i++) {
     const htmlElem = yardWorkPairs[i];
 
     if (htmlElem.style.display !== "none") {
-      if (i === yardWorkPairs.length - 1) visibleIdx = 0;
-      else visibleIdx = i + 1;
+      if (this.id === "rightArrow") {
+        if (i === yardWorkPairs.length - 1) visibleIdx = 0;
+        else visibleIdx = i + 1;
+      } else {
+        if (i === 0) visibleIdx = yardWorkPairs.length - 1;
+        else visibleIdx = i - 1;
+      }
 
       htmlElem.style.display = "none";
 
@@ -24,26 +29,10 @@ rightArrow.addEventListener("click", function () {
   }
 
   yardWorkPairs[visibleIdx].style.display = "flex";
-});
+};
 
-leftArrow.addEventListener("click", function () {
-  let visibleIdx;
-
-  for (let i = 0; i < yardWorkPairs.length; i++) {
-    const htmlElem = yardWorkPairs[i];
-
-    if (htmlElem.style.display !== "none") {
-      if (i === 0) visibleIdx = yardWorkPairs.length - 1; //changed
-      else visibleIdx = i - 1; //changed
-
-      htmlElem.style.display = "none";
-
-      break;
-    }
-  }
-
-  yardWorkPairs[visibleIdx].style.display = "flex";
-});
+rightArrow.addEventListener("click", changePics.bind(rightArrow));
+leftArrow.addEventListener("click", changePics.bind(leftArrow));
 
 const menuContentObj = {
   yardWorkBtn: {
