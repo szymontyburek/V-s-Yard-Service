@@ -30,15 +30,21 @@ body {
   background-repeat: no-repeat;
 }
 
+.workSection {
+  margin: 2em;
+}
+
 .header {
   font-size: 1.5em;
 }
 
 .experienceMenu div {
   background-color: lightgray;
-  width: 33%;
+  width: 30%;
   text-align: center;
   padding: 1em;
+  margin: 2px;
+  text-wrap: nowrap;
 }
 
 .experienceMenu div:hover {

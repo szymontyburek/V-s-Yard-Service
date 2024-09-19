@@ -27,107 +27,104 @@
         "
       ></div>
     </div>
-    <div
-      class="header"
-      style="
-        font-weight: bolder;
-        border-bottom: 1px solid black;
-        padding: 0.5em 0;
-      "
-    >
-      V's Yard Service
-    </div>
-    <div
-      class="experienceMenu"
-      style="
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 2em;
-      "
-    >
-      <div id="yardWorkBtn">Yard Work</div>
-      <div id="haulingBtn">Hauling</div>
-      <div id="handymanBtn">Handyman</div>
-    </div>
-    <!-- refactor: height property for div below - subtract from height of header content for responsiveness !!!!!! -->
-    <div
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: calc(100vh - 150px);
-      "
-    >
-      <svg
-        id="leftArrow"
-        style="padding-right: 0.25em"
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        fill="#000000"
-        viewBox="0 0 256 256"
-      >
-        <path
-          d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"
-        ></path>
-      </svg>
+    <div class="workSection">
       <div
-        class="experienceContent"
-        id="yardWorkContent"
+        class="header"
         style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          display: none;
+          font-weight: bolder;
+          border-bottom: 1px solid black;
+          padding: 0.5em 0;
         "
       >
-        <div class="contentHorizontal" id="yardWork1">
-          <div style="padding: 1em 0">
-            <div class="title" style="margin-top: 0">Before</div>
-            <img src="images/YardWork/yw1Before.jpg" alt="" />
-          </div>
-          <div style="padding: 1em 0">
-            <div class="title">After</div>
-            <img src="images/YardWork/yw1After.jpg" alt="" />
-          </div>
-        </div>
-        <div class="contentVertical" id="yardWork2" style="display: none">
-          <div style="padding: 1em 0.25em">
-            <div class="title" style="font-size: 1.25em">Before</div>
-            <img src="images/YardWork/yw2Before.jpg" alt="" />
-          </div>
-          <div style="padding: 1em 0.25em">
-            <div class="title" style="font-size: 1.25em">After</div>
-            <img src="images/YardWork/yw2After.jpg" alt="" />
-          </div>
-        </div>
-        <div class="contentVertical" id="yardWork3" style="display: none">
-          <div style="padding: 1em 0.25em">
-            <div class="title" style="font-size: 1.25em">Before</div>
-            <img src="images/YardWork/yw3Before.jpg" alt="" />
-          </div>
-          <div style="padding: 1em 0.25em">
-            <div class="title" style="font-size: 1.25em">After</div>
-            <img src="images/YardWork/yw3After.jpg" alt="" />
-          </div>
-        </div>
+        V's Yard Service
       </div>
-      <div id="haulingContent" style="display: none">haulingContent</div>
-      <div id="handymanContent" style="display: none">handymanContent</div>
-      <svg
-        id="rightArrow"
-        style="padding-left: 0.25em"
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        fill="#000000"
-        viewBox="0 0 256 256"
+      <div
+        class="experienceMenu"
+        style="display: flex; align-items: center; margin-top: 2em"
       >
-        <path
-          d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
-        ></path>
-      </svg>
+        <div id="yardWorkBtn">Yard Work</div>
+        <div id="haulingBtn">Hauling</div>
+        <div id="handymanBtn">Handyman</div>
+      </div>
+      <!-- refactor: height property for div below - subtract from height of header content for responsiveness !!!!!! -->
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: calc(100vh - 150px);
+        "
+      >
+        <svg
+          id="leftArrow"
+          style="padding-right: 0.25em"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"
+          ></path>
+        </svg>
+        <div
+          class="experienceContent"
+          id="yardWorkContent"
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            display: none;
+          "
+        >
+          <div class="contentHorizontal" id="yardWork1">
+            <div style="padding: 1em 0">
+              <div class="title" style="margin-top: 0">Before</div>
+              <img src="images/YardWork/yw1Before.jpg" alt="" />
+            </div>
+            <div style="padding: 1em 0">
+              <div class="title">After</div>
+              <img src="images/YardWork/yw1After.jpg" alt="" />
+            </div>
+          </div>
+          <div class="contentVertical" id="yardWork2" style="display: none">
+            <div style="padding: 1em 0.25em">
+              <div class="title" style="font-size: 1.25em">Before</div>
+              <img src="images/YardWork/yw2Before.jpg" alt="" />
+            </div>
+            <div style="padding: 1em 0.25em">
+              <div class="title" style="font-size: 1.25em">After</div>
+              <img src="images/YardWork/yw2After.jpg" alt="" />
+            </div>
+          </div>
+          <div class="contentVertical" id="yardWork3" style="display: none">
+            <div style="padding: 1em 0.25em">
+              <div class="title" style="font-size: 1.25em">Before</div>
+              <img src="images/YardWork/yw3Before.jpg" alt="" />
+            </div>
+            <div style="padding: 1em 0.25em">
+              <div class="title" style="font-size: 1.25em">After</div>
+              <img src="images/YardWork/yw3After.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="haulingContent" style="display: none">haulingContent</div>
+        <div id="handymanContent" style="display: none">handymanContent</div>
+        <svg
+          id="rightArrow"
+          style="padding-left: 0.25em"
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#000000"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"
+          ></path>
+        </svg>
+      </div>
     </div>
     <div
       class="contactSection"
