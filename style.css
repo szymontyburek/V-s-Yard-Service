@@ -1,5 +1,14 @@
+body {
+  margin: 0;
+}
+
 :root {
   --imgBorder: 3px;
+}
+
+.homeSection {
+  background-image: url(images/homeSection/truckAndTrailer.jpg);
+  background-size: cover;
 }
 
 .header {
