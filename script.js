@@ -9,8 +9,9 @@ let yardWorkPairs = [yardWork1, yardWork2, yardWork3];
 
 const handyman1 = document.getElementById("handyman1");
 const handyman2 = document.getElementById("handyman2");
+const handyman3 = document.getElementById("handyman3");
 
-let handymanPairs = [handyman1, handyman2];
+let handymanPairs = [handyman1, handyman2, handyman3];
 
 const changePics = function () {
   let visibleIdx;
