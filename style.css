@@ -53,7 +53,7 @@ body {
   cursor: pointer;
 }
 
-.prevExperience {
+.prevWork {
   width: 90%;
   height: inherit;
 }
@@ -91,7 +91,7 @@ body {
 }
 
 @media (min-width: 601px) {
-  .prevExperience {
+  .prevWork {
     width: 80%;
   }
 
