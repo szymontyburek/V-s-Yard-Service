@@ -81,8 +81,12 @@ body {
 }
 
 @media (min-width: 601px) and (orientation: landscape) {
-  .homeSection {
+  .contactSection {
     background-image: url(images/truck/truckAndTrailer.jpg);
+  }
+
+  .homeSection {
+    background-position: center;
   }
 
   .contentVertical img {
