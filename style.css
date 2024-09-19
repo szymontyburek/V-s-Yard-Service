@@ -6,6 +6,16 @@ body {
   --imgBorder: 3px;
 }
 
+.homeSectionTxt {
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-wrap: nowrap;
+  z-index: 99;
+}
+
 .contactSection {
   background-image: url(images/truck/truckVertical.jpg);
   background-size: cover;
