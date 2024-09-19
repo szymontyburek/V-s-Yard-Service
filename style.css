@@ -6,10 +6,17 @@ body {
   --imgBorder: 3px;
 }
 
-.homeSection {
-  background-image: url(images/homeSection/truckVertical.jpg);
+.contactSection {
+  background-image: url(images/truck/truckVertical.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homeSection {
+  background-image: url(images/YardWork/misc/tree3.jpg);
+  background-size: cover;
+  background-position: top;
   background-repeat: no-repeat;
 }
 
@@ -75,7 +82,7 @@ body {
 
 @media (min-width: 601px) and (orientation: landscape) {
   .homeSection {
-    background-image: url(images/homeSection/truckAndTrailer.jpg);
+    background-image: url(images/truck/truckAndTrailer.jpg);
   }
 
   .contentVertical img {
