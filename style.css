@@ -1,3 +1,124 @@
 body {
-  color: blue;
+  margin: 0;
+}
+
+:root {
+  --imgBorder: 3px;
+}
+
+.homeSectionTxt {
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-wrap: nowrap;
+  z-index: 99;
+}
+
+.contactSection {
+  background-image: url(images/truck/truckVertical.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homeSection {
+  background-image: url(images/YardWork/misc/tree3.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.header {
+  font-size: 1.5em;
+}
+
+.experienceMenu div {
+  background-color: lightgray;
+  width: 33%;
+  text-align: center;
+  padding: 1em;
+}
+
+.experienceMenu div:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.experienceContent {
+  width: 90%;
+  height: inherit;
+}
+
+.contentHorizontal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.contentVertical {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.contentHorizontal .title {
+  font-size: 1.25em;
+}
+
+.contentHorizontal img {
+  width: calc(100% - (var(--imgBorder) * 2));
+  border: var(--imgBorder) solid black;
+  border-radius: 10px;
+}
+
+.contentVertical img {
+  align-items: center;
+  justify-content: space-between;
+  width: calc(38vw - (var(--imgBorder) * 2));
+  border: var(--imgBorder) solid black;
+  border-radius: 10px;
+}
+
+@media (min-width: 601px) {
+  .experienceContent {
+    width: 80%;
+  }
+
+  .homeSectionTxt {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 601px) and (orientation: landscape) {
+  .contactSection {
+    background-image: url(images/truck/truckAndTrailer.jpg);
+  }
+
+  .homeSection {
+    background-image: url(images/YardWork/misc/horiz.jpg);
+    background-position: center;
+  }
+
+  .contentVertical img {
+    width: auto;
+    height: calc(90vh - (var(--imgBorder) * 2) - 150px);
+  }
+
+  .contentHorizontal {
+    width: auto;
+  }
+
+  .contentHorizontal div {
+    margin: 0 0.5em;
+  }
+
+  .contentHorizontal img {
+    height: calc(50vh - (var(--imgBorder) * 2) - 150px);
+    width: auto;
+  }
 }
