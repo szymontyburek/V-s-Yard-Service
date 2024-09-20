@@ -14,6 +14,7 @@ idToArray = {
     document.getElementById("handyman2"),
     document.getElementById("handyman3"),
   ],
+  trimmingContent: [document.getElementById("trimming1")],
 };
 
 const changePics = function () {

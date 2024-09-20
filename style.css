@@ -7,6 +7,13 @@ body {
   --nonPhotoPadding: 1em;
 }
 
+.homeSection,
+.contactSection,
+.workSection {
+  height: 100vh;
+  width: 100vw;
+}
+
 .homeSectionTxt {
   color: white;
   text-align: center;

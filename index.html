@@ -8,10 +8,7 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div
-      class="homeSection"
-      style="height: 100vh; width: 100vw; position: relative"
-    >
+    <div class="homeSection" style="position: relative">
       <h1 class="homeSectionTxt" style="top: 0">V's Yard Service</h1>
       <h2 class="homeSectionTxt" style="bottom: 0">
         Quality Work Affordably Priced!
@@ -105,7 +102,27 @@
             </div>
           </div>
         </div>
-        <div id="trimmingContent" style="display: none">trimmingContent</div>
+        <div
+          class="prevWork"
+          id="trimmingContent"
+          style="
+            display: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <div class="contentVertical" id="trimming1">
+            <div style="padding: 1em 0.25em">
+              <div class="title" style="font-size: 1.25em">Before</div>
+              <img src="images/trimming/before1.jpg" alt="" />
+            </div>
+            <div style="padding: 1em 0.25em">
+              <div class="title" style="font-size: 1.25em">After</div>
+              <img src="images/trimming/after1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
         <div
           class="prevWork"
           id="handymanContent"
@@ -162,10 +179,7 @@
         </svg>
       </div>
     </div>
-    <div
-      class="contactSection"
-      style="height: 100vh; width: 100vw; position: relative"
-    >
+    <div class="contactSection" style="position: relative">
       <div
         style="
           position: absolute;
