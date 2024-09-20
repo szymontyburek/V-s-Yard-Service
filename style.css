@@ -25,7 +25,7 @@ body {
 }
 
 .homeSection {
-  background-image: url(images/trimming/tree3.jpg);
+  background-image: url(images/trimming/after2.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@ body {
   }
 
   .homeSection {
-    background-image: url(images/weedControl/trimming/horiz.jpg);
+    background-image: url(images/homePageHoriz.jpg);
     background-position: center;
   }
 
