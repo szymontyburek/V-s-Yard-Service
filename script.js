@@ -4,10 +4,10 @@ const leftArrow = document.getElementById("leftArrow");
 const prevWorks = Array.from(document.querySelectorAll(".prevWork"));
 
 idToArray = {
-  yardWorkContent: [
-    document.getElementById("yardWork1"),
-    document.getElementById("yardWork2"),
-    document.getElementById("yardWork3"),
+  weedControlContent: [
+    document.getElementById("weedControl1"),
+    document.getElementById("weedControl2"),
+    document.getElementById("weedControl3"),
   ],
   handymanContent: [
     document.getElementById("handyman1"),
@@ -52,13 +52,13 @@ rightArrow.addEventListener("click", changePics.bind(rightArrow));
 leftArrow.addEventListener("click", changePics.bind(leftArrow));
 
 const menuContentObj = {
-  yardWorkBtn: {
-    btn: document.getElementById("yardWorkBtn"),
-    div: document.getElementById("yardWorkContent"),
+  weedControlBtn: {
+    btn: document.getElementById("weedControlBtn"),
+    div: document.getElementById("weedControlContent"),
   },
-  haulingBtn: {
-    btn: document.getElementById("haulingBtn"),
-    div: document.getElementById("haulingContent"),
+  trimmingBtn: {
+    btn: document.getElementById("trimmingBtn"),
+    div: document.getElementById("trimmingContent"),
   },
   handymanBtn: {
     btn: document.getElementById("handymanBtn"),
@@ -87,5 +87,5 @@ for (const menuBtnId of menuBtnIds) {
   });
 }
 
-const yardWorkBtn = document.getElementById("yardWorkBtn");
-yardWorkBtn.click();
+const weedControlBtn = document.getElementById("weedControlBtn");
+weedControlBtn.click();

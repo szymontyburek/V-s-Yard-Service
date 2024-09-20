@@ -24,7 +24,7 @@ body {
 }
 
 .homeSection {
-  background-image: url(images/YardWork/misc/tree3.jpg);
+  background-image: url(images/trimming/tree3.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -44,6 +44,7 @@ body {
   text-align: center;
   padding: 1em;
   margin: 2px;
+  font-size: 0.75em;
   text-wrap: nowrap;
 }
 
@@ -106,7 +107,7 @@ body {
   }
 
   .homeSection {
-    background-image: url(images/YardWork/misc/horiz.jpg);
+    background-image: url(images/weedControl/trimming/horiz.jpg);
     background-position: center;
   }
 
