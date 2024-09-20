@@ -4,6 +4,7 @@ body {
 
 :root {
   --imgBorder: 3px;
+  --nonPhotoPadding: 1em;
 }
 
 .homeSectionTxt {
@@ -30,12 +31,13 @@ body {
   background-repeat: no-repeat;
 }
 
-.workSection {
-  margin: 2em;
-}
-
 .header {
   font-size: 1.5em;
+  padding: 0.5em var(--nonPhotoPadding);
+}
+
+.experienceMenu {
+  padding: 0 var(--nonPhotoPadding);
 }
 
 .experienceMenu div {
