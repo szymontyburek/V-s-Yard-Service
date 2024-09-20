@@ -17,17 +17,24 @@ const prevWorks = Array.from(document.querySelectorAll(".prevWork"));
 
 const changePics = function () {
   let visibleIdx;
-  let prevWorks = handymanPairs;
+  let sections;
 
-  for (let i = 0; i < prevWorks.length; i++) {
-    const htmlElem = prevWorks[i];
+  for (const html of prevWorks) {
+    if (html.style.display !== "none") {
+      sections = prevWorks;
+      break;
+    }
+  }
+
+  for (let i = 0; i < sections.length; i++) {
+    const htmlElem = sections[i];
 
     if (htmlElem.style.display !== "none") {
       if (this.id === "rightArrow") {
-        if (i === prevWorks.length - 1) visibleIdx = 0;
+        if (i === sections.length - 1) visibleIdx = 0;
         else visibleIdx = i + 1;
       } else {
-        if (i === 0) visibleIdx = prevWorks.length - 1;
+        if (i === 0) visibleIdx = sections.length - 1;
         else visibleIdx = i - 1;
       }
 
@@ -37,7 +44,7 @@ const changePics = function () {
     }
   }
 
-  prevWorks[visibleIdx].style.display = "flex";
+  sections[visibleIdx].style.display = "flex";
 };
 
 rightArrow.addEventListener("click", changePics.bind(rightArrow));
