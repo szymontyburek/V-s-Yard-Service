@@ -15,13 +15,18 @@ let handymanPairs = [handyman1, handyman2, handyman3];
 
 const prevWorks = Array.from(document.querySelectorAll(".prevWork"));
 
+htmlToArray = {
+  yardWorkContent: yardWorkPairs,
+  handymanContent: handymanPairs,
+};
+
 const changePics = function () {
   let visibleIdx;
   let sections;
 
   for (const html of prevWorks) {
     if (html.style.display !== "none") {
-      sections = prevWorks;
+      sections = htmlToArray[html.id];
       break;
     }
   }
