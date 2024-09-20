@@ -1,17 +1,16 @@
 const rightArrow = document.getElementById("rightArrow");
 const leftArrow = document.getElementById("leftArrow");
 
-const yardWork1 = document.getElementById("yardWork1");
-const yardWork2 = document.getElementById("yardWork2");
-const yardWork3 = document.getElementById("yardWork3");
-
-let yardWorkPairs = [yardWork1, yardWork2, yardWork3];
-
-const handyman1 = document.getElementById("handyman1");
-const handyman2 = document.getElementById("handyman2");
-const handyman3 = document.getElementById("handyman3");
-
-let handymanPairs = [handyman1, handyman2, handyman3];
+let yardWorkPairs = [
+  document.getElementById("yardWork1"),
+  document.getElementById("yardWork2"),
+  document.getElementById("yardWork3"),
+];
+let handymanPairs = [
+  document.getElementById("handyman1"),
+  document.getElementById("handyman2"),
+  document.getElementById("handyman3"),
+];
 
 const prevWorks = Array.from(document.querySelectorAll(".prevWork"));
 
