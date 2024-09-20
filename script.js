@@ -1,22 +1,19 @@
 const rightArrow = document.getElementById("rightArrow");
 const leftArrow = document.getElementById("leftArrow");
 
-let yardWorkPairs = [
-  document.getElementById("yardWork1"),
-  document.getElementById("yardWork2"),
-  document.getElementById("yardWork3"),
-];
-let handymanPairs = [
-  document.getElementById("handyman1"),
-  document.getElementById("handyman2"),
-  document.getElementById("handyman3"),
-];
-
 const prevWorks = Array.from(document.querySelectorAll(".prevWork"));
 
-htmlToArray = {
-  yardWorkContent: yardWorkPairs,
-  handymanContent: handymanPairs,
+idToArray = {
+  yardWorkContent: [
+    document.getElementById("yardWork1"),
+    document.getElementById("yardWork2"),
+    document.getElementById("yardWork3"),
+  ],
+  handymanContent: [
+    document.getElementById("handyman1"),
+    document.getElementById("handyman2"),
+    document.getElementById("handyman3"),
+  ],
 };
 
 const changePics = function () {
@@ -25,7 +22,7 @@ const changePics = function () {
 
   for (const html of prevWorks) {
     if (html.style.display !== "none") {
-      sections = htmlToArray[html.id];
+      sections = idToArray[html.id];
       break;
     }
   }
