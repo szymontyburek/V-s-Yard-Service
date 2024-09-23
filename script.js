@@ -83,7 +83,7 @@ for (const menuBtnId of menuBtnIds) {
   menuBtn.addEventListener("mouseout", function () {
     if (menuContentObj[this.id].div.style.display != "none")
       this.style.backgroundColor = "#e4e4e4";
-    else this.style.backgroundColor = "var(--truckColor)";
+    else this.style.backgroundColor = "var(--menuOptBackground)";
   });
   //menu options hover effect
 
@@ -98,7 +98,7 @@ for (const menuBtnId of menuBtnIds) {
       } else {
         contentDiv.style.display = "none";
         menuBtn.style.cssText =
-          "background-color: var(--truckColor); color: white;";
+          "background-color: var(--menuOptBackground); color: white;";
       }
     }
   });
