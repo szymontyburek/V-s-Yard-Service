@@ -6,6 +6,7 @@ body {
   --imgBorder: 3px;
   --nonPhotoPadding: 1em;
   --menuOptBackground: #000000;
+  --menuOptAltBackground: darkgray;
 }
 
 .homeSection,

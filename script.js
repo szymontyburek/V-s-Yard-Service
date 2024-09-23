@@ -78,7 +78,7 @@ for (const menuBtnId of menuBtnIds) {
 
   //menu options hover effect
   menuBtn.addEventListener("mouseover", function () {
-    this.style.backgroundColor = "darkgray";
+    this.style.backgroundColor = "var(--menuOptAltBackground)";
   });
   menuBtn.addEventListener("mouseout", function () {
     if (menuContentObj[this.id].div.style.display != "none")
