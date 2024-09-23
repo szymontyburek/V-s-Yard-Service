@@ -74,7 +74,20 @@ const menuContentObj = {
 const menuBtnIds = Object.keys(menuContentObj);
 
 for (const menuBtnId of menuBtnIds) {
-  menuContentObj[menuBtnId].btn.addEventListener("click", function () {
+  const menuBtn = menuContentObj[menuBtnId].btn;
+
+  //menu options hover effect
+  menuBtn.addEventListener("mouseover", function () {
+    this.style.backgroundColor = "darkgray";
+  });
+  menuBtn.addEventListener("mouseout", function () {
+    if (menuContentObj[this.id].div.style.display != "none")
+      this.style.backgroundColor = "#e4e4e4";
+    else this.style.backgroundColor = "var(--truckColor)";
+  });
+  //menu options hover effect
+
+  menuBtn.addEventListener("click", function () {
     for (const menuBtnId of menuBtnIds) {
       const menuBtn = menuContentObj[menuBtnId].btn;
       const contentDiv = menuContentObj[menuBtnId].div;
