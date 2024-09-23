@@ -81,12 +81,11 @@ for (const menuBtnId of menuBtnIds) {
 
       if (contentDiv === menuContentObj[this.id].div) {
         contentDiv.style.display = "flex";
-        menuBtn.style.backgroundColor = "#943333";
-        menuBtn.style.color = "white";
+        menuBtn.style.cssText = "background-color: #e4e4e4; color: black;";
       } else {
         contentDiv.style.display = "none";
-        menuBtn.style.backgroundColor = "var(--truckColor)";
-        menuBtn.style.color = "white";
+        menuBtn.style.cssText =
+          "background-color: var(--truckColor); color: white;";
       }
     }
   });
