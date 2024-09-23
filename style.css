@@ -59,8 +59,8 @@ body {
 }
 
 .experienceMenu div:hover {
-  background-color: black;
-  color: white;
+  transition: 0.3s;
+  background-color: darkgray !important;
   cursor: pointer;
 }
 
