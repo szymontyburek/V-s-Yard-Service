@@ -16,6 +16,10 @@ body {
   width: 100vw;
 }
 
+.workSection {
+  user-select: none;
+}
+
 .homeSectionTxt {
   color: white;
   text-align: center;
