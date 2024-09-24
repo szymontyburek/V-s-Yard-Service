@@ -1,21 +1,48 @@
 const rightArrow = document.getElementById("rightArrow");
 const leftArrow = document.getElementById("leftArrow");
 
-const yardWork1 = document.getElementById("yardWork1");
-const yardWork2 = document.getElementById("yardWork2");
-const yardWork3 = document.getElementById("yardWork3");
+const prevWorks = Array.from(document.querySelectorAll(".prevWork"));
 
-let yardWorkPairs = [yardWork1, yardWork2, yardWork3];
+idToArray = {
+  weedControlContent: [
+    document.getElementById("weedControl1"),
+    document.getElementById("weedControl2"),
+    document.getElementById("weedControl3"),
+  ],
+  handymanContent: [
+    document.getElementById("handyman1"),
+    document.getElementById("handyman2"),
+    document.getElementById("handyman3"),
+  ],
+  trimmingContent: [
+    document.getElementById("trimming1"),
+    document.getElementById("trimming2"),
+    document.getElementById("trimming3"),
+  ],
+};
 
-rightArrow.addEventListener("click", function () {
+const changePics = function () {
   let visibleIdx;
+  let sections;
 
-  for (let i = 0; i < yardWorkPairs.length; i++) {
-    const htmlElem = yardWorkPairs[i];
+  for (const html of prevWorks) {
+    if (html.style.display !== "none") {
+      sections = idToArray[html.id];
+      break;
+    }
+  }
+
+  for (let i = 0; i < sections.length; i++) {
+    const htmlElem = sections[i];
 
     if (htmlElem.style.display !== "none") {
-      if (i === yardWorkPairs.length - 1) visibleIdx = 0;
-      else visibleIdx = i + 1;
+      if (this.id === "rightArrow") {
+        if (i === sections.length - 1) visibleIdx = 0;
+        else visibleIdx = i + 1;
+      } else {
+        if (i === 0) visibleIdx = sections.length - 1;
+        else visibleIdx = i - 1;
+      }
 
       htmlElem.style.display = "none";
 
@@ -23,36 +50,20 @@ rightArrow.addEventListener("click", function () {
     }
   }
 
-  yardWorkPairs[visibleIdx].style.display = "flex";
-});
+  sections[visibleIdx].style.display = "flex";
+};
 
-leftArrow.addEventListener("click", function () {
-  let visibleIdx;
-
-  for (let i = 0; i < yardWorkPairs.length; i++) {
-    const htmlElem = yardWorkPairs[i];
-
-    if (htmlElem.style.display !== "none") {
-      if (i === 0) visibleIdx = yardWorkPairs.length - 1; //changed
-      else visibleIdx = i - 1; //changed
-
-      htmlElem.style.display = "none";
-
-      break;
-    }
-  }
-
-  yardWorkPairs[visibleIdx].style.display = "flex";
-});
+rightArrow.addEventListener("click", changePics.bind(rightArrow));
+leftArrow.addEventListener("click", changePics.bind(leftArrow));
 
 const menuContentObj = {
-  yardWorkBtn: {
-    btn: document.getElementById("yardWorkBtn"),
-    div: document.getElementById("yardWorkContent"),
+  weedControlBtn: {
+    btn: document.getElementById("weedControlBtn"),
+    div: document.getElementById("weedControlContent"),
   },
-  haulingBtn: {
-    btn: document.getElementById("haulingBtn"),
-    div: document.getElementById("haulingContent"),
+  trimmingBtn: {
+    btn: document.getElementById("trimmingBtn"),
+    div: document.getElementById("trimmingContent"),
   },
   handymanBtn: {
     btn: document.getElementById("handymanBtn"),
@@ -63,23 +74,35 @@ const menuContentObj = {
 const menuBtnIds = Object.keys(menuContentObj);
 
 for (const menuBtnId of menuBtnIds) {
-  menuContentObj[menuBtnId].btn.addEventListener("click", function () {
+  const menuBtn = menuContentObj[menuBtnId].btn;
+
+  //menu options hover effect
+  menuBtn.addEventListener("mouseover", function () {
+    this.style.backgroundColor = "var(--menuOptAltBackground)";
+  });
+  menuBtn.addEventListener("mouseout", function () {
+    if (menuContentObj[this.id].div.style.display != "none")
+      this.style.backgroundColor = "#e4e4e4";
+    else this.style.backgroundColor = "var(--menuOptBackground)";
+  });
+  //menu options hover effect
+
+  menuBtn.addEventListener("click", function () {
     for (const menuBtnId of menuBtnIds) {
       const menuBtn = menuContentObj[menuBtnId].btn;
       const contentDiv = menuContentObj[menuBtnId].div;
 
       if (contentDiv === menuContentObj[this.id].div) {
         contentDiv.style.display = "flex";
-        menuBtn.style.backgroundColor = "black";
-        menuBtn.style.color = "white";
+        menuBtn.style.cssText = "background-color: #e4e4e4; color: black;";
       } else {
         contentDiv.style.display = "none";
-        menuBtn.style.backgroundColor = "lightgray";
-        menuBtn.style.color = "black";
+        menuBtn.style.cssText =
+          "background-color: var(--menuOptBackground); color: white;";
       }
     }
   });
 }
 
-const yardWorkBtn = document.getElementById("yardWorkBtn");
-yardWorkBtn.click();
+const weedControlBtn = document.getElementById("weedControlBtn");
+weedControlBtn.click();

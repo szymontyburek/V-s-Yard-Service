@@ -1,9 +1,27 @@
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 :root {
   --imgBorder: 3px;
+  --nonPhotoPadding: 1em;
+  --menuOptBackground: #000000;
+  --menuOptAltBackground: darkgray;
+}
+
+.homeSection,
+.contactSection,
+.workSection {
+  height: 100vh;
+  width: 100vw;
+}
+
+.workSection {
+  user-select: none;
 }
 
 .homeSectionTxt {
@@ -24,7 +42,7 @@ body {
 }
 
 .homeSection {
-  background-image: url(images/YardWork/misc/tree3.jpg);
+  background-image: url(images/trimming/after2.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -32,22 +50,29 @@ body {
 
 .header {
   font-size: 1.5em;
+  padding: 0.5em var(--nonPhotoPadding);
+}
+
+.experienceMenu {
+  padding: 0 var(--nonPhotoPadding);
 }
 
 .experienceMenu div {
-  background-color: lightgray;
-  width: 33%;
+  background-color: var(--menuOptBackground);
+  border: 1px solid black;
+  width: 30%;
   text-align: center;
   padding: 1em;
+  font-size: 0.75em;
+  text-wrap: nowrap;
 }
 
 .experienceMenu div:hover {
-  background-color: black;
-  color: white;
+  transition: 0.3s;
   cursor: pointer;
 }
 
-.experienceContent {
+.prevWork {
   width: 90%;
   height: inherit;
 }
@@ -68,6 +93,7 @@ body {
 
 .contentHorizontal .title {
   font-size: 1.25em;
+  color: black;
 }
 
 .contentHorizontal img {
@@ -85,7 +111,7 @@ body {
 }
 
 @media (min-width: 601px) {
-  .experienceContent {
+  .prevWork {
     width: 80%;
   }
 
@@ -100,7 +126,7 @@ body {
   }
 
   .homeSection {
-    background-image: url(images/YardWork/misc/horiz.jpg);
+    background-image: url(images/homePageHoriz.jpg);
     background-position: center;
   }
 
@@ -111,10 +137,6 @@ body {
 
   .contentHorizontal {
     width: auto;
-  }
-
-  .contentHorizontal div {
-    margin: 0 0.5em;
   }
 
   .contentHorizontal img {
