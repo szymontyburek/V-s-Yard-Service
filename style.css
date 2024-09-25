@@ -121,7 +121,8 @@ body {
 }
 
 .servicesList {
-  padding: 0;
+  padding-left: 1em;
+  text-align: left;
 }
 
 .servicesList li {
