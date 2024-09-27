@@ -8,9 +8,9 @@ body {
 
 :root {
   --imgBorder: 3px;
-  --nonPhotoPadding: 1em;
   --menuOptBackground: #000000;
   --menuOptAltBackground: darkgray;
+  --workSectionSpacing: 0.75em;
 }
 
 .homeSection,
@@ -22,6 +22,9 @@ body {
 
 .workSection {
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .overlay {
@@ -58,15 +61,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.header {
-  font-size: 1.5em;
-  padding: 0.5em var(--nonPhotoPadding);
-}
-
-.experienceMenu {
-  padding: 0 var(--nonPhotoPadding);
-}
-
 .experienceMenu div {
   background-color: var(--menuOptBackground);
   border: 1px solid black;
@@ -83,7 +77,7 @@ body {
 }
 
 .prevWork {
-  width: 90%;
+  width: calc(100% - var(--workSectionSpacing));
   height: inherit;
 }
 
@@ -93,6 +87,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.contentHorizontal .beforePhoto,
+.contentHorizontal .afterPhoto {
+  margin: calc(var(--workSectionSpacing) / 2) 0;
+}
+
+.contentVertical .beforePhoto,
+.contentVertical .afterPhoto {
+  margin: calc(var(--workSectionSpacing) / 2);
 }
 
 .contentVertical {
@@ -148,7 +152,7 @@ body {
   }
 
   .homeSection {
-    background-image: url(images/homePageHoriz.jpg);
+    background-image: url(images/trimming/after5.jpg);
     background-position: center;
   }
 

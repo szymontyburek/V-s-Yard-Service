@@ -15,35 +15,30 @@
       </h2>
       <div class="overlay"></div>
     </div>
-    <div class="workSection" style="background-color: #e4e4e4; color: black">
-      <div
-        class="header"
-        style="font-weight: bolder; border-bottom: 1px solid black"
-      >
-        V's Yard Service
-      </div>
+    <div
+      class="workSection"
+      style="background-color: #e4e4e4; color: black; position: relative"
+    >
       <div
         class="experienceMenu"
         style="
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 2em;
+          margin: calc(var(--workSectionSpacing) / 2) var(--workSectionSpacing);
+          position: absolute;
+          top: 0;
+          width: calc(100% - var(--workSectionSpacing));
+          margin: var(--workSectionSpacing) 0;
+          left: -50%;
+          transform: translateX(calc(50% + var(--workSectionSpacing)));
         "
       >
         <div id="weedControlBtn">Weed Control</div>
         <div id="trimmingBtn">Trimming</div>
         <div id="handymanBtn">Handyman</div>
       </div>
-      <!-- refactor: height property for div below - subtract from height of header content for responsiveness !!!!!! -->
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: calc(100vh - 150px);
-        "
-      >
+      <div style="display: flex; justify-content: center; align-items: center">
         <svg
           id="leftArrow"
           style="padding-right: 0.25em; cursor: pointer"
@@ -67,34 +62,54 @@
             display: none;
           "
         >
-          <div class="contentHorizontal" id="weedControl1">
-            <div style="padding: 1em 0">
+          <div class="contentHorizontal">
+            <div class="beforePhoto">
               <div class="title" style="margin-top: 0">Before</div>
               <img src="images/weedControl/yw1Before.jpg" alt="" />
             </div>
-            <div style="padding: 1em 0">
+            <div class="afterPhoto">
               <div class="title">After</div>
               <img src="images/weedControl/yw1After.jpg" alt="" />
             </div>
           </div>
-          <div class="contentVertical" id="weedControl2" style="display: none">
-            <div style="padding: 1em 0.25em">
+          <div class="contentVertical" style="display: none">
+            <div class="beforePhoto">
               <div class="title" style="font-size: 1.25em">Before</div>
               <img src="images/weedControl/yw2Before.jpg" alt="" />
             </div>
-            <div style="padding: 1em 0.25em">
+            <div class="afterPhoto">
               <div class="title" style="font-size: 1.25em">After</div>
               <img src="images/weedControl/yw2After.jpg" alt="" />
             </div>
           </div>
-          <div class="contentVertical" id="weedControl3" style="display: none">
-            <div style="padding: 1em 0.25em">
+          <div class="contentVertical" style="display: none">
+            <div class="beforePhoto">
               <div class="title" style="font-size: 1.25em">Before</div>
-              <img src="images/weedControl/yw3Before.jpg" alt="" />
+              <img src="images/weedControl/before7.jpg" alt="" />
             </div>
-            <div style="padding: 1em 0.25em">
+            <div class="afterPhoto">
               <div class="title" style="font-size: 1.25em">After</div>
-              <img src="images/weedControl/yw3After.jpg" alt="" />
+              <img src="images/weedControl/after7.jpg" alt="" />
+            </div>
+          </div>
+          <div class="contentVertical" style="display: none">
+            <div class="beforePhoto">
+              <div class="title" style="font-size: 1.25em">Before</div>
+              <img src="images/weedControl/before8.jpg" alt="" />
+            </div>
+            <div class="afterPhoto">
+              <div class="title" style="font-size: 1.25em">After</div>
+              <img src="images/weedControl/after8.jpg" alt="" />
+            </div>
+          </div>
+          <div class="contentHorizontal" style="display: none">
+            <div class="beforePhoto">
+              <div class="title" style="margin-top: 0">Before</div>
+              <img src="images/weedControl/before9.jpg" alt="" />
+            </div>
+            <div class="afterPhoto">
+              <div class="title">After</div>
+              <img src="images/weedControl/after9.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -108,34 +123,54 @@
             align-items: center;
           "
         >
-          <div class="contentVertical" id="trimming1">
-            <div style="padding: 1em 0.25em">
-              <div class="title" style="font-size: 1.25em">Before</div>
-              <img src="images/trimming/before1.jpg" alt="" />
-            </div>
-            <div style="padding: 1em 0.25em">
-              <div class="title" style="font-size: 1.25em">After</div>
-              <img src="images/trimming/after1.jpg" alt="" />
-            </div>
-          </div>
-          <div class="contentVertical" id="trimming2" style="display: none">
-            <div style="padding: 1em 0.25em">
+          <div class="contentVertical">
+            <div class="beforePhoto">
               <div class="title" style="font-size: 1.25em">Before</div>
               <img src="images/trimming/before2.jpg" alt="" />
             </div>
-            <div style="padding: 1em 0.25em">
+            <div class="afterPhoto">
               <div class="title" style="font-size: 1.25em">After</div>
               <img src="images/trimming/after2.jpg" alt="" />
             </div>
           </div>
-          <div class="contentVertical" id="trimming3" style="display: none">
-            <div style="padding: 1em 0.25em">
+          <div class="contentVertical" style="display: none">
+            <div class="beforePhoto">
               <div class="title" style="font-size: 1.25em">Before</div>
               <img src="images/trimming/before3.jpg" alt="" />
             </div>
-            <div style="padding: 1em 0.25em">
+            <div class="afterPhoto">
               <div class="title" style="font-size: 1.25em">After</div>
               <img src="images/trimming/after3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="contentHorizontal" style="display: none">
+            <div class="beforePhoto">
+              <div class="title" style="margin-top: 0">Before</div>
+              <img src="images/trimming/before4.jpg" alt="" />
+            </div>
+            <div class="afterPhoto">
+              <div class="title">After</div>
+              <img src="images/trimming/after4.jpg" alt="" />
+            </div>
+          </div>
+          <div class="contentHorizontal" style="display: none">
+            <div class="beforePhoto">
+              <div class="title" style="margin-top: 0">Before</div>
+              <img src="images/trimming/before5.jpg" alt="" />
+            </div>
+            <div class="afterPhoto">
+              <div class="title">After</div>
+              <img src="images/trimming/after5.jpg" alt="" />
+            </div>
+          </div>
+          <div class="contentHorizontal" style="display: none">
+            <div class="beforePhoto">
+              <div class="title" style="margin-top: 0">Before</div>
+              <img src="images/trimming/before6.jpg" alt="" />
+            </div>
+            <div class="afterPhoto">
+              <div class="title">After</div>
+              <img src="images/trimming/after6.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -149,32 +184,32 @@
             align-items: center;
           "
         >
-          <div class="contentHorizontal" id="handyman1">
-            <div style="padding: 1em 0">
+          <div class="contentHorizontal">
+            <div class="beforePhoto">
               <div class="title" style="margin-top: 0">Before</div>
               <img src="images/handyman/before1.jpg" alt="" />
             </div>
-            <div style="padding: 1em 0">
+            <div class="afterPhoto">
               <div class="title">After</div>
               <img src="images/handyman/after1.jpg" alt="" />
             </div>
           </div>
-          <div class="contentHorizontal" id="handyman2" style="display: none">
-            <div style="padding: 1em 0">
+          <div class="contentHorizontal" style="display: none">
+            <div class="beforePhoto">
               <div class="title" style="margin-top: 0">Before</div>
               <img src="images/handyman/before2.jpg" alt="" />
             </div>
-            <div style="padding: 1em 0">
+            <div class="afterPhoto">
               <div class="title">After</div>
               <img src="images/handyman/after2.jpg" alt="" />
             </div>
           </div>
-          <div class="contentHorizontal" id="handyman3" style="display: none">
-            <div style="padding: 1em 0">
+          <div class="contentHorizontal" style="display: none">
+            <div class="beforePhoto">
               <div class="title" style="margin-top: 0">Before</div>
               <img src="images/handyman/before3.jpg" alt="" />
             </div>
-            <div style="padding: 1em 0">
+            <div class="afterPhoto">
               <div class="title">After</div>
               <img src="images/handyman/after3.jpg" alt="" />
             </div>
