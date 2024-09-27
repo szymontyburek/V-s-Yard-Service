@@ -91,7 +91,7 @@ body {
 
 .beforePhoto,
 .afterPhoto {
-  margin-bottom: var(--workSectionSpacing);
+  margin: calc(var(--workSectionSpacing) / 2) 0;
 }
 
 .contentVertical {
