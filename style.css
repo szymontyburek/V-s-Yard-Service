@@ -8,7 +8,6 @@ body {
 
 :root {
   --imgBorder: 3px;
-  --nonPhotoPadding: 1em;
   --menuOptBackground: #000000;
   --menuOptAltBackground: darkgray;
   --workSectionSpacing: 2em;
@@ -59,15 +58,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.header {
-  font-size: 1.5em;
-  padding: 0.5em var(--nonPhotoPadding);
-}
-
-.experienceMenu {
-  padding: 0 var(--nonPhotoPadding);
-}
-
 .experienceMenu div {
   background-color: var(--menuOptBackground);
   border: 1px solid black;
@@ -84,7 +74,7 @@ body {
 }
 
 .prevWork {
-  width: 90%;
+  width: calc(100% - var(--workSectionSpacing));
   height: inherit;
 }
 
@@ -94,6 +84,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.beforePhoto,
+.afterPhoto {
+  margin-bottom: var(--workSectionSpacing);
 }
 
 .contentVertical {
