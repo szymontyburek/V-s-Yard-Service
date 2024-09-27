@@ -100,9 +100,14 @@ body {
   justify-content: space-evenly;
 }
 
-.beforePhoto,
-.afterPhoto {
+.contentHorizontal .beforePhoto,
+.contentHorizontal .afterPhoto {
   margin: calc(var(--workSectionSpacing) / 2) 0;
+}
+
+.contentVertical .beforePhoto,
+.contentVertical .afterPhoto {
+  margin: 0 calc(var(--workSectionSpacing) / 2);
 }
 
 .contentVertical {
@@ -153,11 +158,6 @@ body {
 
   :root {
     --translateXval: 35%; /* 1/2 of .prevWork div width */
-  }
-
-  .contentVertical .beforePhoto,
-  .contentVertical .afterPhoto {
-    margin: 0 calc(var(--workSectionSpacing) / 2);
   }
 
   .photoPairsCont {
