@@ -15,7 +15,10 @@
       </h2>
       <div class="overlay"></div>
     </div>
-    <div class="workSection" style="background-color: #e4e4e4; color: black">
+    <div
+      class="workSection"
+      style="background-color: #e4e4e4; color: black; position: relative"
+    >
       <div
         class="experienceMenu"
         style="
@@ -23,6 +26,12 @@
           align-items: center;
           justify-content: center;
           margin: calc(var(--workSectionSpacing) / 2) var(--workSectionSpacing);
+          position: absolute;
+          top: 0;
+          width: calc(100% - var(--workSectionSpacing));
+          margin: var(--workSectionSpacing) 0;
+          left: -50%;
+          transform: translateX(calc(50% + var(--workSectionSpacing)));
         "
       >
         <div id="weedControlBtn">Weed Control</div>
