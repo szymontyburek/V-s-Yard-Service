@@ -4,22 +4,16 @@ const leftArrow = document.getElementById("leftArrow");
 const prevWorks = Array.from(document.querySelectorAll(".prevWork"));
 
 idToArray = {
-  weedControlContent: [
-    document.getElementById("weedControl1"),
-    document.getElementById("weedControl2"),
-    document.getElementById("weedControl3"),
-  ],
-  handymanContent: [
-    document.getElementById("handyman1"),
-    document.getElementById("handyman2"),
-    document.getElementById("handyman3"),
-  ],
-  trimmingContent: [
-    document.getElementById("trimming1"),
-    document.getElementById("trimming2"),
-    document.getElementById("trimming3"),
-  ],
+  weedControlContent: [],
+  handymanContent: [],
+  trimmingContent: [],
 };
+
+const parentIds = Object.keys(idToArray);
+for (const parentId of parentIds) {
+  const parent = document.getElementById(parentId);
+  for (const child of parent.children) idToArray[parent.id].push(child);
+}
 
 const changePics = function () {
   let visibleIdx;
