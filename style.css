@@ -63,6 +63,7 @@ body {
 }
 
 .experienceMenu {
+  position: absolute;
   transform: translateX(calc(50% + var(--workSectionSpacing)));
   width: calc(var(--translateXval) * 2 - var(--workSectionSpacing));
 }
@@ -175,10 +176,6 @@ body {
     margin: 0 calc(var(--workSectionSpacing) / 2);
   }
 
-  .contentHorizontal {
-    flex-direction: row;
-  }
-
   .contactSection {
     background-image: url(images/truck/truckAndTrailer.jpg);
   }
@@ -204,6 +201,16 @@ body {
 
   .servicesList li {
     font-size: 0.35em;
+  }
+
+  .experienceMenu {
+    position: static;
+    transform: none;
+  }
+
+  .workSection {
+    align-items: center;
+    justify-content: normal;
   }
 }
 
