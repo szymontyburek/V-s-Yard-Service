@@ -25,20 +25,18 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: calc(var(--workSectionSpacing) / 2) var(--workSectionSpacing);
           position: absolute;
           top: 0;
-          width: calc(100% - var(--workSectionSpacing));
+          left: calc(var(--translateXval) * -1);
+          width: calc(var(--translateXval) * 2 - var(--workSectionSpacing));
           margin: var(--workSectionSpacing) 0;
-          left: -50%;
-          transform: translateX(calc(50% + var(--workSectionSpacing)));
         "
       >
         <div id="weedControlBtn">Weed Control</div>
         <div id="trimmingBtn">Trimming</div>
         <div id="handymanBtn">Handyman</div>
       </div>
-      <div style="display: flex; justify-content: center; align-items: center">
+      <div class="photoPairsCont" style="display: flex; align-items: center">
         <svg
           id="leftArrow"
           style="padding-right: 0.25em; cursor: pointer"
