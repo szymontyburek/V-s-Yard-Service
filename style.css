@@ -174,11 +174,6 @@ body {
 }
 
 @media (min-width: 601px) and (orientation: landscape) {
-  .contentHorizontal .beforePhoto,
-  .contentHorizontal .afterPhoto {
-    margin: 0 calc(var(--workSectionSpacing) / 2);
-  }
-
   .contactSection {
     background-image: url(images/truck/truckAndTrailer.jpg);
   }
@@ -196,6 +191,11 @@ body {
   .contentVertical img {
     width: 100%;
     height: auto;
+  }
+
+  .contentHorizontal,
+  .contentVertical {
+    margin-bottom: var(--workSectionSpacing);
   }
 
   .prevWork {
