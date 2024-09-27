@@ -10,7 +10,7 @@ body {
   --imgBorder: 3px;
   --menuOptBackground: #000000;
   --menuOptAltBackground: darkgray;
-  --workSectionSpacing: 0.75em;
+  --workSectionSpacing: 1em;
   --translateXval: 50%;
 }
 
@@ -64,6 +64,7 @@ body {
 
 .experienceMenu {
   transform: translateX(calc(50% + var(--workSectionSpacing)));
+  width: calc(var(--translateXval) * 2 - var(--workSectionSpacing));
 }
 
 .experienceMenu div {
@@ -98,14 +99,9 @@ body {
   justify-content: space-evenly;
 }
 
-.contentHorizontal .beforePhoto,
-.contentHorizontal .afterPhoto {
+.beforePhoto,
+.afterPhoto {
   margin: calc(var(--workSectionSpacing) / 2) 0;
-}
-
-.contentVertical .beforePhoto,
-.contentVertical .afterPhoto {
-  margin: calc(var(--workSectionSpacing) / 2);
 }
 
 .contentVertical {
@@ -143,9 +139,8 @@ body {
 
 @media (min-width: 601px) {
   .experienceMenu {
-    transform: translateX(
-      calc(var(--translateXval) * 2 + var(--workSectionSpacing))
-    );
+    transform: translateX(calc(var(--translateXval) * 2));
+    width: calc(var(--translateXval) * 2);
   }
 
   .prevWork {
@@ -154,6 +149,11 @@ body {
 
   :root {
     --translateXval: 35%; /* 1/2 of .prevWork div width */
+  }
+
+  .contentVertical .beforePhoto,
+  .contentVertical .afterPhoto {
+    margin: 0 calc(var(--workSectionSpacing) / 2);
   }
 
   .photoPairsCont {
