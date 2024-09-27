@@ -11,6 +11,7 @@ body {
   --nonPhotoPadding: 1em;
   --menuOptBackground: #000000;
   --menuOptAltBackground: darkgray;
+  --workSectionSpacing: 2em;
 }
 
 .homeSection,
@@ -21,6 +22,7 @@ body {
 
 .workSection {
   user-select: none;
+  width: 100vw;
 }
 
 .overlay {
