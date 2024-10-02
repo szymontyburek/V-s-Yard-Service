@@ -118,9 +118,11 @@ body {
   height: 100%;
 }
 
-.contentHorizontal .title {
+.title {
   font-size: 1.25em;
   color: black;
+  margin-bottom: var(--workSectionSpacing);
+  font-weight: bolder;
 }
 
 .contentHorizontal img {
