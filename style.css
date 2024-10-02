@@ -66,6 +66,7 @@ body {
   position: absolute;
   transform: translateX(calc(50% + var(--workSectionSpacing)));
   width: calc(var(--translateXval) * 2 - var(--workSectionSpacing));
+  left: calc(var(--translateXval) * -1);
 }
 
 .experienceMenu div {
@@ -183,37 +184,22 @@ body {
     background-position: center;
   }
 
-  .contentHorizontal img,
-  .contentVertical img {
-    width: 100%;
-    height: auto;
+  .experienceMenu {
+    left: auto; /* to center the menu horizontally */
   }
 
-  .contentHorizontal,
-  .contentVertical {
-    margin-bottom: var(--workSectionSpacing);
-  }
-
-  .prevWork {
+  .prevWork,
+  .experienceMenu {
     width: 40%;
+    padding-left: var(--workSectionSpacing);
   }
 
-  :root {
-    --translateXval: 20%; /* 1/2 of .prevWork div width */
+  .contentHorizontal {
+    margin-top: calc(var(--workSectionSpacing) * 2);
   }
 
   .servicesList li {
     font-size: 0.35em;
-  }
-
-  .experienceMenu {
-    position: static;
-    transform: none;
-  }
-
-  .workSection {
-    align-items: center;
-    justify-content: normal;
   }
 }
 
