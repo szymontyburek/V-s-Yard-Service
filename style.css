@@ -48,18 +48,21 @@ body {
   z-index: 99;
 }
 
+.homeSection,
+.contactSection {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .contactSection {
   background-image: url(images/truck/truckVertical.jpg);
-  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  font-size: 0.8em;
 }
 
 .homeSection {
   background-image: url(images/trimming/after2.jpg);
-  background-size: cover;
   background-position: top;
-  background-repeat: no-repeat;
 }
 
 .experienceMenu {
@@ -142,14 +145,6 @@ body {
   width: calc(100% - (var(--imgBorder) * 2));
 }
 
-.servicesList {
-  padding: 0;
-}
-
-.servicesList li {
-  padding: 0.5em 0;
-}
-
 @media (min-width: 601px) {
   .prevWork,
   .experienceMenu {
@@ -162,10 +157,6 @@ body {
 
   .overlayTxt {
     font-size: 2.5em;
-  }
-
-  .servicesList li {
-    font-size: 0.6em;
   }
 }
 
@@ -186,21 +177,5 @@ body {
 
   .contentHorizontal {
     margin-top: calc(var(--workSectionSpacing) * 2);
-  }
-
-  .servicesList li {
-    font-size: 0.35em;
-  }
-}
-
-@media (min-width: 1280px) {
-  .servicesList li {
-    font-size: 0.5em;
-  }
-}
-
-@media (min-width: 1920px) {
-  .servicesList li {
-    font-size: 0.8em;
   }
 }
