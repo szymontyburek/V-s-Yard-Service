@@ -146,6 +146,12 @@ body {
   width: calc(100% - (var(--imgBorder) * 2));
 }
 
+.serviceBox {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--servicesBoxSpacing);
+}
+
 @media (min-width: 601px) {
   .prevWork,
   .experienceMenu {
@@ -185,6 +191,15 @@ body {
   }
 
   .serviceBox {
-    font-size: 1.25em;
+    font-size: 1em;
+    left: auto;
+    transform: none;
+    right: var(--workSectionSpacing);
+  }
+}
+
+@media (min-width: 1280px) {
+  .serviceBox {
+    font-size: 1.5em;
   }
 }
