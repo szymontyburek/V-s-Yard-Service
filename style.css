@@ -64,9 +64,10 @@ body {
 
 .experienceMenu {
   position: absolute;
-  transform: translateX(calc(50% + var(--workSectionSpacing)));
+  transform: translateX(-50%);
   width: calc(var(--translateXval) * 2 - var(--workSectionSpacing));
-  left: calc(var(--translateXval) * -1);
+  left: 50%;
+  margin: var(--workSectionSpacing) 0;
 }
 
 .experienceMenu div {
@@ -148,17 +149,9 @@ body {
 }
 
 @media (min-width: 601px) {
+  .prevWork,
   .experienceMenu {
-    transform: translateX(calc(var(--translateXval) * 2));
-    width: calc(var(--translateXval) * 2);
-  }
-
-  .prevWork {
     width: 70%;
-  }
-
-  :root {
-    --translateXval: 35%; /* 1/2 of .prevWork div width */
   }
 
   .photoPairsCont {
@@ -184,14 +177,9 @@ body {
     background-position: center;
   }
 
-  .experienceMenu {
-    left: auto; /* to center the menu horizontally */
-  }
-
   .prevWork,
   .experienceMenu {
-    width: 40%;
-    padding-left: var(--workSectionSpacing);
+    width: 35%;
   }
 
   .contentHorizontal {
