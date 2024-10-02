@@ -11,7 +11,6 @@ body {
   --menuOptBackground: #000000;
   --menuOptAltBackground: darkgray;
   --workSectionSpacing: 1em;
-  --translateXval: 50%;
   --servicesBoxSpacing: 1em;
 }
 
@@ -69,7 +68,7 @@ body {
 .experienceMenu {
   position: absolute;
   transform: translateX(-50%);
-  width: calc(var(--translateXval) * 2 - var(--workSectionSpacing));
+  width: calc(100% - var(--workSectionSpacing));
   left: 50%;
   margin: var(--workSectionSpacing) 0;
 }
