@@ -10,7 +10,8 @@ body {
   --imgBorder: 3px;
   --menuOptBackground: #000000;
   --menuOptAltBackground: darkgray;
-  --workSectionSpacing: 0.75em;
+  --workSectionSpacing: 1em;
+  --servicesBoxSpacing: 1em;
 }
 
 .homeSection,
@@ -47,33 +48,48 @@ body {
   z-index: 99;
 }
 
+.homeSection,
+.contactSection {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .contactSection {
   background-image: url(images/truck/truckVertical.jpg);
-  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  font-size: 0.8em;
 }
 
 .homeSection {
   background-image: url(images/trimming/after2.jpg);
-  background-size: cover;
   background-position: top;
-  background-repeat: no-repeat;
+}
+
+.experienceMenu {
+  position: absolute;
+  transform: translateX(-50%);
+  width: calc(100% - var(--workSectionSpacing));
+  left: 50%;
+  margin: var(--workSectionSpacing) 0;
 }
 
 .experienceMenu div {
   background-color: var(--menuOptBackground);
-  border: 1px solid black;
+  border: 1px solid var(--menuOptAltBackground);
   width: 30%;
   text-align: center;
   padding: 1em;
-  font-size: 0.75em;
+  font-size: 1em;
   text-wrap: nowrap;
 }
 
 .experienceMenu div:hover {
   transition: 0.3s;
   cursor: pointer;
+}
+
+.photoPairsCont {
+  justify-content: center;
 }
 
 .prevWork {
@@ -96,7 +112,7 @@ body {
 
 .contentVertical .beforePhoto,
 .contentVertical .afterPhoto {
-  margin: calc(var(--workSectionSpacing) / 2);
+  margin: 0 calc(var(--workSectionSpacing) / 2);
 }
 
 .contentVertical {
@@ -105,13 +121,14 @@ body {
   height: 100%;
 }
 
-.contentHorizontal .title {
+.title {
   font-size: 1.25em;
   color: black;
+  margin-bottom: var(--workSectionSpacing);
+  font-weight: bolder;
 }
 
 .contentHorizontal img {
-  width: calc(100% - (var(--imgBorder) * 2));
   border: var(--imgBorder) solid black;
   border-radius: 10px;
 }
@@ -119,30 +136,37 @@ body {
 .contentVertical img {
   align-items: center;
   justify-content: space-between;
-  width: calc(38vw - (var(--imgBorder) * 2));
   border: var(--imgBorder) solid black;
   border-radius: 10px;
 }
 
-.servicesList {
-  padding: 0;
+.contentHorizontal img,
+.contentVertical img {
+  width: calc(100% - (var(--imgBorder) * 2));
 }
 
-.servicesList li {
-  padding: 0.5em 0;
+.serviceBox {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--servicesBoxSpacing);
 }
 
 @media (min-width: 601px) {
-  .prevWork {
-    width: 80%;
+  .prevWork,
+  .experienceMenu {
+    width: 70%;
+  }
+
+  .photoPairsCont {
+    justify-content: space-around;
   }
 
   .overlayTxt {
     font-size: 2.5em;
   }
 
-  .servicesList li {
-    font-size: 0.6em;
+  .serviceBox {
+    font-size: 1.75em;
   }
 }
 
@@ -156,33 +180,25 @@ body {
     background-position: center;
   }
 
-  .contentVertical img {
-    width: auto;
-    height: calc(90vh - (var(--imgBorder) * 2) - 150px);
+  .prevWork,
+  .experienceMenu {
+    width: 35%;
   }
 
   .contentHorizontal {
-    width: auto;
+    margin-top: calc(var(--workSectionSpacing) * 2);
   }
 
-  .contentHorizontal img {
-    height: calc(50vh - (var(--imgBorder) * 2) - 150px);
-    width: auto;
-  }
-
-  .servicesList li {
-    font-size: 0.35em;
+  .serviceBox {
+    font-size: 1em;
+    left: auto;
+    transform: none;
+    right: var(--workSectionSpacing);
   }
 }
 
 @media (min-width: 1280px) {
-  .servicesList li {
-    font-size: 0.5em;
-  }
-}
-
-@media (min-width: 1920px) {
-  .servicesList li {
-    font-size: 0.8em;
+  .serviceBox {
+    font-size: 1.5em;
   }
 }

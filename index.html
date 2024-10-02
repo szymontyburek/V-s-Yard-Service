@@ -25,20 +25,14 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: calc(var(--workSectionSpacing) / 2) var(--workSectionSpacing);
-          position: absolute;
-          top: 0;
-          width: calc(100% - var(--workSectionSpacing));
-          margin: var(--workSectionSpacing) 0;
-          left: -50%;
-          transform: translateX(calc(50% + var(--workSectionSpacing)));
+          top: var(--workSectionSpacing);
         "
       >
         <div id="weedControlBtn">Weed Control</div>
         <div id="trimmingBtn">Trimming</div>
         <div id="handymanBtn">Handyman</div>
       </div>
-      <div style="display: flex; justify-content: center; align-items: center">
+      <div class="photoPairsCont" style="display: flex; align-items: center">
         <svg
           id="leftArrow"
           style="padding-right: 0.25em; cursor: pointer"
@@ -231,11 +225,28 @@
       </div>
     </div>
     <div class="contactSection" style="position: relative">
-      <h1 class="overlayTxt" style="top: 1%; font-size: 3em">(928) 679-5861</h1>
-      <div class="overlayTxt" style="bottom: 1%">
+      <div
+        class="serviceBox"
+        style="
+          color: white;
+          position: absolute;
+          text-wrap: nowrap;
+          z-index: 99;
+          text-align: left;
+          text-wrap: nowrap;
+          width: auto;
+          border: 2px solid white;
+          border-radius: 10px;
+        "
+      >
+        <h1 style="padding-left: var(--servicesBoxSpacing)">(928) 679-5861</h1>
         <ul
           class="servicesList"
-          style="text-wrap: pretty; list-style-type: none"
+          style="
+            padding-right: var(--servicesBoxSpacing);
+            line-height: 2em;
+            list-style: circle;
+          "
         >
           <li>Weekly * Bi-Weekly * Monthly Yard Maintenance</li>
           <li>Shrub & Hedge Trimming</li>
@@ -245,7 +256,7 @@
           <li>Minor Handyman Work</li>
         </ul>
       </div>
-      <div class="overlay" style="opacity: 0.6"></div>
+      <div class="overlay" style="opacity: 0.5"></div>
     </div>
   </body>
 </html>
