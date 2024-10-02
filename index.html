@@ -226,21 +226,32 @@
     </div>
     <div class="contactSection" style="position: relative">
       <div
-        class="overlayTxt"
+        class="serviceBox"
         style="
-          bottom: 1%;
+          color: white;
+          width: inherit;
+          text-align: center;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          text-wrap: nowrap;
+          z-index: 99;
+          bottom: var(--servicesBoxSpacing);
           text-align: left;
           text-wrap: nowrap;
           width: auto;
           border: 1px solid white;
           border-radius: 10px;
-          margin-bottom: 1em;
         "
       >
-        <h1 style="padding-left: 1em">(928) 679-5861</h1>
+        <h1 style="padding-left: var(--servicesBoxSpacing)">(928) 679-5861</h1>
         <ul
           class="servicesList"
-          style="padding-right: 1em; line-height: 2em; list-style: circle"
+          style="
+            padding-right: var(--servicesBoxSpacing);
+            line-height: 2em;
+            list-style: circle;
+          "
         >
           <li>Weekly * Bi-Weekly * Monthly Yard Maintenance</li>
           <li>Shrub & Hedge Trimming</li>
