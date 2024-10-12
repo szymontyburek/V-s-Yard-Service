@@ -44,7 +44,6 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  text-wrap: nowrap;
   z-index: 99;
 }
 
